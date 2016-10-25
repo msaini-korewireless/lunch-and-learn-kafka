@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Lunch and Learn - Apache Kafka</title>
+		<meta name="description" content="A lunch and learn on Apache Kafka">
+		<meta name="author" content="Trevor J. Schmitz">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="/node_modules/reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="/node_modules/reveal.js/css/theme/league.css" id="theme">
+		<link rel="stylesheet" href="/node_modules/reveal.js/lib/css/zenburn.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Apache Kafka</h1>
+					<h3>A high-throughput distributed messaging system.</h3>
+				</section>
+			</div>
+		</div>
+		<script src="/node_modules/reveal.js/lib/js/head.min.js"></script>
+		<script src="/node_modules/reveal.js/js/reveal.js"></script>
+		<script>
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				transition: 'slide',
+				dependencies: [
+					{ src: '/node_modules/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '/node_modules/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '/node_modules/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '/node_modules/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '/node_modules/reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: '/node_modules/reveal.js/plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>

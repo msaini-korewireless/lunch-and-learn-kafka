@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Lunch and Learn - Apache Kafka</title>
+		<title>Lunch and Learn - Apache kafka</title>
 		<meta name="description" content="A lunch and learn on Apache Kafka">
 		<meta name="author" content="Trevor J. Schmitz">
 		<meta name="apple-mobile-web-app-capable" content="yes">
@@ -11,13 +11,60 @@
 		<link rel="stylesheet" href="/node_modules/reveal.js/css/reveal.css">
 		<link rel="stylesheet" href="/node_modules/reveal.js/css/theme/league.css" id="theme">
 		<link rel="stylesheet" href="/node_modules/reveal.js/lib/css/zenburn.css">
+    <style>
+      .pull-left {
+        text-align: left;
+      }
+    </style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>
+				<section data-background-color="#0B6D88">
 					<h1>Apache Kafka</h1>
-					<h3>A high-throughput distributed messaging system.</h3>
+					<h3>A distributed streaming platform</h3>
+				</section>
+        <section data-background-color="#0B6D88" class="pull-left">
+					<h2>What is a distributed streaming platform?</h2>
+          <p>Allows you to publish / subscribe to records.</p>
+          <p>Very similar to a message queue / broker.</p>
+          <p>Stores records in a fault-tolerant way.</p>
+          <p>Processes records in real-time.</p>
+				</section>
+        <section data-background-color="#0B6D88" class="pull-left">
+					<h2>Use Cases</h2>
+          <p>Real-time streaming data pipelines that reliably get data between systems or applications.</p>
+          <p>Real-time streaming applications that transform or react to the streams of data.</p>
+				</section>
+        <section data-background-color="#0B6D88" class="pull-left">
+					<h2>Concepts</h2>
+          <p>Ran as a cluster on one or more servers.</p>
+          <p>Stores records in categories called topics.</p>
+          <p>Each record consists of a key, value, and timestamp.</p>
+          <pre><code class="hljs" data-trim>
+{
+  "key": "topic-key",
+  "value": "could-be-json-serialized-object",
+  "timestamp": "2016-10-25 9:19 PM"
+}
+          </code></pre>
+				</section>
+        <section data-background-color="#0B6D88">
+					<h1>APIs</h1>
+				</section>
+        <section data-background-color="#0B6D88" class="pull-left">
+					<h2>Producer</h2>
+          <p>Allows applications to publish records to one or more topics.</p>
+				</section>
+        <section data-background-color="#0B6D88" class="pull-left">
+					<h2>Consumer</h2>
+          <p>Allows applications to subscribe to one or more topics and process records.</p>
+				</section>
+        <section data-background-color="#0B6D88" class="pull-left">
+					<h2>Streams</h2>
+				</section>
+        <section data-background-color="#0B6D88" class="pull-left">
+					<h2>Connector</h2>
 				</section>
 			</div>
 		</div>
@@ -25,17 +72,10 @@
 		<script src="/node_modules/reveal.js/js/reveal.js"></script>
 		<script>
 			Reveal.initialize({
-				controls: true,
-				progress: true,
+				controls: false,
 				history: true,
-				center: true,
-				transition: 'slide',
 				dependencies: [
-					{ src: '/node_modules/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: '/node_modules/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: '/node_modules/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
 					{ src: '/node_modules/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: '/node_modules/reveal.js/plugin/zoom-js/zoom.js', async: true },
 					{ src: '/node_modules/reveal.js/plugin/notes/notes.js', async: true }
 				]
 			});

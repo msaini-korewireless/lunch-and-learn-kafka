@@ -11,21 +11,23 @@ TODO
 TODO
 
 ## APIs
+
+### Producer API
 TODO
 
-### Producer
+### Consumer API
 TODO
 
-### Consumer
+### Streams API
 TODO
 
-### Streams
-TODO
-
-### Connector
+### Connector API
 TODO
 
 ## Topics
+TODO
+
+## Distribution
 TODO
 
 ## Messaging System

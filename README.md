@@ -2,12 +2,9 @@
 A distributed streaming platform.
 
 ## What is a distributed streaming platform?
-Allows you to publish / subscribe to data streams.
-
-Very similar to a message queue / broker.
-
-Stores data in a fault-tolerant way.
-
+Allows you to publish / subscribe to data streams.  
+Very similar to a message queue / broker.  
+Stores data in a fault-tolerant way.  
 Processes data in real-time.
 
 ## Use Cases

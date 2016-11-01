@@ -26,21 +26,24 @@
 				</section>
         <section data-background-color="#0B6D88" class="pull-left">
 					<h2>What is a distributed streaming platform?</h2>
-          <p>Allows you to publish / subscribe to records.</p>
+          <p>Allows you to publish / subscribe to data streams.</p>
           <p>Very similar to a message queue / broker.</p>
-          <p>Stores records in a fault-tolerant way.</p>
-          <p>Processes records in real-time.</p>
+          <p>Stores data in a fault-tolerant way.</p>
+          <p>Processes data in real-time.</p>
 				</section>
         <section data-background-color="#0B6D88" class="pull-left">
 					<h2>Use Cases</h2>
-          <p>Real-time streaming data pipelines that reliably get data between systems or applications.</p>
-          <p>Real-time streaming applications that transform or react to the streams of data.</p>
+          <p>Analytics.</p>
+          <p>Log aggregation.</p>
+          <p>Data pipelines.</p>
+          <p>Reactive apps.</p>
+          <p>Tranformation apps.</p>
 				</section>
         <section data-background-color="#0B6D88" class="pull-left">
 					<h2>Concepts</h2>
-          <p>Ran as a cluster on one or more servers.</p>
-          <p>Stores records in categories called topics.</p>
-          <p>Each record consists of a key, value, and timestamp.</p>
+          <p>Ran as a cluster on one or many servers.</p>
+          <p>Stores data in categories called topics.</p>
+          <p>Data consists of a key, value, and timestamp.</p>
           <pre><code class="hljs" data-trim>
 {
   "key": "topic-key",
@@ -54,36 +57,73 @@
 				</section>
         <section data-background-color="#0B6D88" class="pull-left">
 					<h2>Producer API</h2>
-          <p>Allows applications to publish records to one or more topics.</p>
+          <p>Allows apps to publish data to topics.</p>
+          <p>Responsible for assigning data to partition.</p>
+          <p>Can be round-robin for simple load balance.</p>
+          <p>Can be key-based.</p>
 				</section>
         <section data-background-color="#0B6D88" class="pull-left">
 					<h2>Consumer API</h2>
-          <p>Allows applications to subscribe to one or more topics and process records.</p>
-				</section>
+          <p>Allows apps to subscribe to topics and process data streams.</p>
+          <p>Considered consumer group.</p>
+          <p>Data is delivered to one consumer within each group.</p>
+          <p>Can be multi-threaded or on different machines.</p>
+          <p>Load balanced with same consumer group.</p>
+          <p>Broadcast if all instances have different consumer groups.</p>
+        </section>
         <section data-background-color="#0B6D88" class="pull-left">
 					<h2>Streams API</h2>
-          <p>Allows applications to act as a stream processor.</p>
+          <p>Allows apps to act as a stream processor.</p>
           <p>Consumes an input stream from one or more topics.</p>
           <p>Produces an output stream to one or more output topics.</p>
           <p>Transforms input streams to output streams.</p>
 				</section>
         <section data-background-color="#0B6D88" class="pull-left">
 					<h2>Connector API</h2>
+          <p>Connects to existing apps.</p>
+          <p>Scalable and secure data pipelines.</p>
+          <p>Database connector.</p>
+          <p>Source (import) and sink (export) connectors.</p>
 				</section>
         <section data-background-color="#0B6D88" class="pull-left">
-					<h2>Topics</h2>
+					<h2>Topics and Logs</h2>
+          <p>TODO</p>
 				</section>
         <section data-background-color="#0B6D88" class="pull-left">
 					<h2>Distribution</h2>
+          <p>Partitions are distributed over the cluster and replicated.</p>
+          <p>Each has one leader and zero or many followers.</p>
+          <p>Leader handles all reads / writes.</p>
+          <p>Leader fails, follower then becomes leader.</p>
 				</section>
         <section data-background-color="#0B6D88" class="pull-left">
 					<h2>Messaging System</h2>
+          <p>Consumer group generalizes queuing and pub-sub.</p>
+          <p>Distributes and scales to members of consumer group.</p>
+          <p>Allows broadcast to consumer group.</p>
+          <p>Provides ordering guarantees and load balancing.</p>
+          <p>Each partition is consumed by exactly one consumer in group.</p>
 				</section>
         <section data-background-color="#0B6D88" class="pull-left">
 					<h2>Storage System</h2>
+          <p>Data written to disk.</p>
+          <p>Replicated for fault-tolerance.</p>
+          <p>Waits for ack and not committed on failure.</p>
+          <p>Allows clients to control read position.</p>
 				</section>
         <section data-background-color="#0B6D88" class="pull-left">
 					<h2>Stream Processing</h2>
+          <p>Take input, process, push output.</p>
+          <p>Computes aggregations off of streams or joins.</p>
+          <p>Performant stateful computations.</p>
+          <p>Handles out-of-order data.</p>
+          <p>Reprocessing.</p>
+				</section>
+        <section data-background-color="#0B6D88">
+					<h1>Configuration</h1>
+				</section>
+        <section data-background-color="#0B6D88">
+					<h1>Demo</h1>
 				</section>
 			</div>
 		</div>

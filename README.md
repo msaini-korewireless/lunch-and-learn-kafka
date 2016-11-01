@@ -120,7 +120,6 @@ https://goo.gl/jO71TO
 
 ```bash
 > tar -xzf kafka_2.11-0.10.1.0.tgz
-
 > cd kafka_2.11-0.10.1.0
 ```
 
@@ -128,7 +127,6 @@ https://goo.gl/jO71TO
 
 ```bash
 > cp config/server.properties config/server-1.properties
-
 > cp config/server.properties config/server-2.properties
 ```
 
@@ -137,18 +135,12 @@ Edit the following properties:
 ```bash
 config/server-1.properties:
   broker.id=1
-
   listeners=PLAINTEXT://:9093
-
   log.dir=/tmp/kafka-logs-1
 
-
 config/server-2.properties:
-
   broker.id=2
-
   listeners=PLAINTEXT://:9094
-
   log.dir=/tmp/kafka-logs-2
 ```
 
@@ -158,11 +150,8 @@ Kafka uses Zookeeper to manage connections.
 ```bash
 > bin/zookeeper-server-start.sh config/zookeeper.properties
 
-
 > bin/kafka-server-start.sh config/server.properties
-
 > bin/kafka-server-start.sh config/server-1.properties 
-
 > bin/kafka-server-start.sh config/server-2.properties 
 ```
 

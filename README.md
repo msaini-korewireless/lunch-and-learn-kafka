@@ -36,7 +36,7 @@ Load balanced with same consumer group.
 Broadcast if all instances have different consumer groups.  
 
 ### Streams API
-Allows apps to act as a stream processor.  
+Allows apps to act as stream processors.  
 Consumes an input stream from topics.  
 Produces an output stream to output topics.  
 Transforms input streams to output streams.  
@@ -47,8 +47,14 @@ Scalable and secure data pipelines.
 Database connector.  
 Source (import) and sink (export) connectors.  
 
-## Topics
-TODO
+## Topics and Logs
+Category or feed that data is published to.  
+Always multi-subscriber.  
+Maintains a partition log.  
+Ordered, immutable sequence that is appended to.  
+Data is assigned an offset.  
+All data is retained and configured by rentention period.  
+Position of the offset is controller by the consumer.  
 
 ## Distribution
 Partitions are distributed over the cluster and replicated.  
